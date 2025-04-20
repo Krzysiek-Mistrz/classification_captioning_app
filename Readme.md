@@ -8,7 +8,10 @@ Prosty projekt demonstrujący:
 
 ## 📂 Struktura projektu
 
-├── data/  │ ├── train/  │ ├── valid/  │ └── test/  │ ├── main.py  ├── models.py  ├── utils.py  ├── requirements.txt  └── README.md  
+└── repo/  
+    ├── app.py  
+    ├── LICENSE  
+    └── README.md  
 
 ---
 

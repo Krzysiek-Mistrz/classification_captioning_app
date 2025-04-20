@@ -8,7 +8,7 @@ Prosty projekt demonstrujący:
 
 ## 📂 Struktura projektu
 
-├── data/ # (pobrane auto­matycznie) zestaw danych │ ├── train/ # katalog do trenowania │ ├── valid/ # katalog walidacyjny │ └── test/ # katalog testowy │ ├── main.py # główny skrypt: trenowanie, ewaluacja, captioning ├── models.py # definicje sieci (VGG16, BLIP wraper) ├── utils.py # helpery do pobierania, seedowania, wykresów ├── requirements.txt # lista zależności └── README.md # ten plik
+├── data/  │ ├── train/ # katalog do trenowania  │ ├── valid/  │ └── test/  │ ├── main.py  ├── models.py  ├── utils.py  ├── requirements.txt  └── README.md  
 
 ---
 

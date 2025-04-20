@@ -8,7 +8,7 @@ Prosty projekt demonstrujący:
 
 ## 📂 Struktura projektu
 
-├── data/  │ ├── train/ # katalog do trenowania  │ ├── valid/  │ └── test/  │ ├── main.py  ├── models.py  ├── utils.py  ├── requirements.txt  └── README.md  
+├── data/  │ ├── train/  │ ├── valid/  │ └── test/  │ ├── main.py  ├── models.py  ├── utils.py  ├── requirements.txt  └── README.md  
 
 ---
 

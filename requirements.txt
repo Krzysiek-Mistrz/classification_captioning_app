@@ -1,0 +1,6 @@
+tensorflow>=2.5
+numpy
+matplotlib
+Pillow
+transformers
+torch

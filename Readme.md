@@ -1,28 +1,25 @@
 # Aircraft Damage Detection & Captioning
 
 Prosty projekt demonstrujący:
-1. **Klasyfikację binarną uszkodzeń lotniczych** przy użyciu transfer learning na bazie VGG16.  
+1. **Klasyfikację binarną uszkodzeń lotniczych** przy użyciu transfer learning (VGG16).  
 2. **Generowanie podpisów (captioning)** zdjęć uszkodzonych części za pomocą modelu BLIP.
 
 ---
 
 ## 📂 Struktura projektu
 
-└── repo/  
-    ├── app.py  
-    ├── LICENSE  
-    └── README.md  
+aircraft-damage-captioning/ ├── data/ # dane pobierane automatycznie │ ├── train/ # zestaw treningowy │ ├── valid/ # zestaw walidacyjny │ └── test/ # zestaw testowy ├── src/ # kod źródłowy │ ├── data_utils.py # pobieranie, ekstrakcja, generatory │ ├── models.py # architektury sieci │ ├── trainer.py # trening, ewaluacja, wykresy │ ├── captioning.py # generowanie captionów BLIP │ └── main.py # uruchomienie całego pipeline'u ├── requirements.txt # zależności └── README.md # ten plik
 
 ---
 
 ## 🚀 Szybki start
 
-1. **Klonowanie repozytorium**
+1. **Klonowanie repozytorium**  
    ```bash
    git clone https://github.com/TWOJ_UZYTKOWNIK/aircraft-damage-captioning.git
    cd aircraft-damage-captioning
 
-    Utwórz i aktywuj środowisko (opcjonalnie, np. conda lub venv)
+    Utwórz i aktywuj środowisko
 
 python -m venv .venv
 source .venv/bin/activate      # Linux/macOS
@@ -34,7 +31,7 @@ pip install -r requirements.txt
 
 Uruchomienie pełnego pipeline’u
 
-    python main.py
+    python src/main.py
 
         pobiera i wypakowuje dane
 
@@ -42,11 +39,11 @@ Uruchomienie pełnego pipeline’u
 
         ewaluacja na zbiorze testowym
 
-        generuje podpisy wybranych obrazków
+        generuje przykładowy podpis do zdjęcia
 
 🛠️ Dependencies
 
-    tensorflow ≥ 2.x
+    tensorflow ≥ 2.5
 
     numpy
 
@@ -56,11 +53,10 @@ Uruchomienie pełnego pipeline’u
 
     transformers (Hugging Face)
 
-    torch (PyTorch)
+    torch
 
 📈 Wyniki
 
     Dokładność klasyfikatora: wyświetlana po treningu
 
-    Przykładowe podpisy BLIP: drukowane w konsoli, np.
-
+    Przykładowe podpisy BLIP: drukowane w konsoli

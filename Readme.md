@@ -1,62 +1,65 @@
 # Aircraft Damage Detection & Captioning
 
-Prosty projekt demonstrujący:
+Projekt demonstruje:
 1. **Klasyfikację binarną uszkodzeń lotniczych** przy użyciu transfer learning (VGG16).  
 2. **Generowanie podpisów (captioning)** zdjęć uszkodzonych części za pomocą modelu BLIP.
 
 ---
 
-## 📂 Struktura projektu
+## Struktura projektu
 
-aircraft-damage-captioning/ ├── data/ # dane pobierane automatycznie │ ├── train/ # zestaw treningowy │ ├── valid/ # zestaw walidacyjny │ └── test/ # zestaw testowy ├── src/ # kod źródłowy │ ├── data_utils.py # pobieranie, ekstrakcja, generatory │ ├── models.py # architektury sieci │ ├── trainer.py # trening, ewaluacja, wykresy │ ├── captioning.py # generowanie captionów BLIP │ └── main.py # uruchomienie całego pipeline'u ├── requirements.txt # zależności └── README.md # ten plik
+```
+classification_captioning_app/
+├── Readme.md
+├── LICENSE
+└── src/
+    ├── __init__.py
+    ├── captioning.py
+    ├── data_utils.py
+    ├── main.py
+    ├── models.py
+    └── trainer.py
+```
 
 ---
 
-## 🚀 Szybki start
+## Szybki start
 
 1. **Klonowanie repozytorium**  
    ```bash
    git clone https://github.com/TWOJ_UZYTKOWNIK/aircraft-damage-captioning.git
    cd aircraft-damage-captioning
+   ```  
 
-    Utwórz i aktywuj środowisko
+2. **Utwórz i aktywuj środowisko:**  
+    ```
+    python -m venv .venv
+    source .venv/bin/activate      # Linux/macOS
+    .venv\Scripts\activate         # Windows
+    ```  
 
-python -m venv .venv
-source .venv/bin/activate      # Linux/macOS
-.venv\Scripts\activate         # Windows
+3. **Instalacja zależności**  
+`pip install -r requirements.txt`  
 
-Instalacja zależności
+4. **Uruchomienie pełnego pipeline’u (schemat)**  
+    python src/data_utils.py  
+        - pobiera i wypakowuje dane  
+    python src/main.py  
+        - trenuje model klasyfikacji  
+        - ewaluacja na zbiorze testowym  
+    python src/captioning.py  
+        - generuje przykładowy podpis do zdjęcia  
+    python src/main.py  
+        - zbiera wszystkie te funkcjonalności w całość (jak to main ;) )  
 
-pip install -r requirements.txt
+5. **Dependencies**
+    - tensorflow ≥ 2.5  
+    - numpy  
+    - matplotlib  
+    - Pillow  
+    - transformers (Hugging Face)  
+    - torch  
 
-Uruchomienie pełnego pipeline’u
-
-    python src/main.py
-
-        pobiera i wypakowuje dane
-
-        trenuje model klasyfikacji
-
-        ewaluacja na zbiorze testowym
-
-        generuje przykładowy podpis do zdjęcia
-
-🛠️ Dependencies
-
-    tensorflow ≥ 2.5
-
-    numpy
-
-    matplotlib
-
-    Pillow
-
-    transformers (Hugging Face)
-
-    torch
-
-📈 Wyniki
-
-    Dokładność klasyfikatora: wyświetlana po treningu
-
-    Przykładowe podpisy BLIP: drukowane w konsoli
+6. **Wyniki**
+    - Dokładność klasyfikatora: wyświetlana po treningu  
+    - Przykładowe podpisy BLIP: drukowane w konsoli  
